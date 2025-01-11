@@ -54,6 +54,11 @@ resource "aws_dynamodb_table" "usuario-dynamodb-table" {
     type = "S"
   }
 
+  attribute {
+    name = "email"
+    type = "S"
+  }
+
   # Definindo TTL
   ttl {
     attribute_name = "TimeToExist"
