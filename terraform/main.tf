@@ -9,13 +9,7 @@ resource "aws_dynamodb_table" "video-dynamodb-table" {
     name = "Id"
     type = "S"
   }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
-  }
 }
-
 
 resource "aws_dynamodb_table" "usuario-dynamodb-table" {
   name           = "Usuario"
@@ -27,10 +21,5 @@ resource "aws_dynamodb_table" "usuario-dynamodb-table" {
   attribute {
     name = "Id"
     type = "S"
-  }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
   }
 }
