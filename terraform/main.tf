@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "video-dynamodb-table" {
-  name           = "Video-DynamoDB-Table"
+  name           = "Video"
   billing_mode   = "PROVISIONED"
   read_capacity  = 3
   write_capacity = 3
@@ -24,7 +24,7 @@ resource "aws_dynamodb_table" "video-dynamodb-table" {
 
 
 resource "aws_dynamodb_table" "usuario-dynamodb-table" {
-  name           = "Usuario-DynamoDB-Table"
+  name           = "Usuario"
   billing_mode   = "PROVISIONED"
   read_capacity  = 3
   write_capacity = 3
