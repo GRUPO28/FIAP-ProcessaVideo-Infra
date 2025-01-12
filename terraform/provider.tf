@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "dynamo-infra"
-    key    = "./terraform.tfstate"
-    region = "us-east-1"
+    bucket = "github-pipe"
+    key    = "hackathon-infra-db/terraform.tfstate"
+    region = "sa-east-1"
   }
 }
 
