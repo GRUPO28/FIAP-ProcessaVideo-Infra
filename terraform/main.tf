@@ -3,16 +3,10 @@ resource "aws_dynamodb_table" "video-dynamodb-table" {
   billing_mode   = "PROVISIONED"
   read_capacity  = 3
   write_capacity = 3
-  hash_key       = "Id"
-  range_key      = "Id_Usuario"
+  hash_key       = "Id_Video"
 
   attribute {
-    name = "Id"
-    type = "S"
-  }
-
-  attribute {
-    name = "Id_Usuario"
+    name = "Id_Video"
     type = "S"
   }
 
