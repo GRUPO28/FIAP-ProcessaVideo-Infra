@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0" # Exemplo de versão, com base em sua necessidade
+      version = "5.62.0"
     }
   }
 
@@ -18,7 +18,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project = "Infra dynamodb para projeto processa vídeo"
+      Project = "Infra para projeto processa vídeo"
       Owner   = "Grupo 28"
     }
   }
