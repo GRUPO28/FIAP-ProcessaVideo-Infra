@@ -6,7 +6,6 @@ resource "aws_dynamodb_table" "video-dynamodb-table" {
   hash_key       = "Id"
   range_key      = "Id_Usuario"
 
-  # Definindo os atributos da tabela
   attribute {
     name = "Id"
     type = "S"
@@ -17,17 +16,6 @@ resource "aws_dynamodb_table" "video-dynamodb-table" {
     type = "S"
   }
 
-  attribute {
-    name = "Url"
-    type = "S"
-  }
-
-  attribute {
-    name = "Status"
-    type = "S"
-  }
-
-  # Definindo TTL
   ttl {
     attribute_name = "TimeToExist"
     enabled        = false
@@ -42,24 +30,11 @@ resource "aws_dynamodb_table" "usuario-dynamodb-table" {
   write_capacity = 3
   hash_key       = "Id_Usuario"
 
-  # Definindo os atributos da tabela
-
   attribute {
     name = "Id_Usuario"
     type = "S"
   }
 
-  attribute {
-    name = "Password"
-    type = "S"
-  }
-
-  attribute {
-    name = "email"
-    type = "S"
-  }
-
-  # Definindo TTL
   ttl {
     attribute_name = "TimeToExist"
     enabled        = false
