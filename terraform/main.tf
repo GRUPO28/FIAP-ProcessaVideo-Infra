@@ -9,17 +9,17 @@ resource "aws_dynamodb_table" "video-dynamodb-table" {
     name = "Id"
     type = "S"
   }
-}
-
-resource "aws_dynamodb_table" "usuario-dynamodb-table" {
-  name           = "Usuario"
-  billing_mode   = "PROVISIONED"
-  read_capacity  = 3
-  write_capacity = 3
-  hash_key       = "Id"
 
   attribute {
-    name = "Id"
+    name = "Email"
     type = "S"
+  }
+
+  global_secondary_index {
+    name            = "EmailIndex"
+    hash_key        = "Email"
+    projection_type = "ALL"
+    read_capacity   = 3
+    write_capacity  = 3
   }
 }
