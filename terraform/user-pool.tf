@@ -73,7 +73,7 @@ resource "aws_cognito_user_pool_client" "userpool_client" {
 }
 
 resource "aws_cognito_user_pool_domain" "userpool_domain" {
-  domain       = "processa-video-domain"
+  domain       = "processa-video-app-domain"
   user_pool_id = module.cognito_user_pool.id
 
   depends_on = [ module.cognito_user_pool ]

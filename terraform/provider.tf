@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "github-pipe"
+    bucket = "processa-video-infra"
     key    = "hackathon-infra-db/terraform.tfstate"
-    region = "sa-east-1"
+    region = "us-east-1"
   }
 }
 
