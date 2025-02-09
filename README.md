@@ -1,18 +1,13 @@
-#  Hackathon - Provisionamento infra db
+#  Hackathon - Provisionamento infraestrutura
 
-Este projeto utiliza o Terraform para provisionar o DynamoDB na AWS.
+Este projeto utiliza o Terraform para provisionar o DynamoDB na AWS, user pool e o sqs para o projeto processa vídeo.
 
-## DynamoDB
-Aqui ficaram armazenados duas tabelas:
-- **users**: Dados do usuário
-  - id_Usuario
-  - password
-  - email
-- **video**: Dados do processamento do vídeo
-  - id
-  - url
-  - id_Usuario
-  - status
+## Importante
+Lembrese de criar um usuário e fazer login no cognito pois o token será usado para acessar a API.
+
+## Para mais informações sobre o projeto:
+[Processa Vídeo - API](https://github.com/GRUPO28/FIAP-ProcessaVideo-API)
+
 
 ## Passos para provisionar a infra manualmente:
 - Adicionar as credenciais de acesso em `~/.aws/credentials`
